@@ -1,0 +1,439 @@
+/* Basic Typhographi*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Basic Typhographi End */
+
+/* Header Area  */
+.header {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0, .2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header .logo h1{
+    font-size: 30px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.header .logo h1:hover {
+    color: #fc451e;
+}
+
+.header .logo h1 .fa-trash-restore{
+    color: #fc451e;
+    margin-right: 5px;
+}
+
+.header .option {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.header .option div {
+    margin: 5px 0;
+    height: 3px;
+    background-color: #333;
+    transition: .5s;
+}
+
+.header .option div:nth-child(1) {
+    width: 100%;
+}
+
+.header .option div:nth-child(2) {
+    width: 50%;
+}
+
+.header .option div:nth-child(3) {
+    width: 70%;
+}
+
+.header .option:hover div {
+    background-color: #fc451e;
+}
+
+.header .option:hover div:nth-child(1){
+    width: 70%;
+}
+
+.header .option:hover div:nth-child(2){
+    width: 50%;
+}
+
+.header .option:hover div:nth-child(3){
+    width: 100%;
+}
+
+.header .social a {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.header .social a .fa-twitter, .header .social a .fa-instagram  {
+    color: #999999;
+    transition: .3s;
+    font-size: 28px;
+}
+
+.header .social a .fa-twitter:hover, .header .social a .fa-instagram:hover{
+    color: #fc451e;
+}
+/* Header Area End*/
+
+/* Slider Area Start  */
+.carousel {
+    width: 100%;
+    margin-top: 75px;
+    position: relative;    
+}
+
+.carousel .carouselItem{
+    width: 100%;
+    position: relative;
+}
+
+.carousel .carouselItem::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .7);
+}
+
+.carousel .carouselItem img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.carousel .someText {
+    width: 70%;
+    padding: 0 50px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.carousel h5 {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.carousel h2 {
+    font-size: 42px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.carousel p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.carousel .fa-arrow-alt-circle-down{
+    font-size: 28px;
+    font-weight: 300;
+    animation: animate 1s linear infinite;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        margin-top: 0;
+    }
+    50% {
+        opacity: 1;
+        margin-top: 10px;
+    }
+    100% {
+        opacity: 0;
+        margin-top: 10px;
+    }
+}
+
+.carousel .control {
+    width: 100%;
+    padding: 0 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel .control .left, .carousel .control .right {
+    padding: 12px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.carousel .control .left:hover, .carousel .control .right:hover {
+    background-color: #eee;
+    color: #111;
+}
+/* Slider Area Start End */
+
+/* Article Part  */
+.articleSection {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    padding-top: 60px;
+    color: #000;
+    text-align: justify;
+}
+
+.articleSection .articleItems p{
+    margin-bottom: 35px;
+    color: #313131;
+}
+
+.articleSection .articleItems:nth-child(1) p{
+    margin-bottom: 0px;
+}
+
+.articleSection .articleItems h2 {
+    margin: 25px 0 35px;
+}
+
+.articleSection .articleItems strong {
+    display: inline-block;
+    margin: 0 0 35px;
+    color: #000;
+}
+/* Article Part End */
+
+/* Social Part */
+.socialPart {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 0 40px;
+}
+
+.socialPart .TwoSocialPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialPart .TwoSocialPart .leftSocial {
+    display: flex;
+}
+
+.socialPart .TwoSocialPart .leftSocial a{
+    display: flex;
+    padding: 5px 10px;
+    border: 1px solid #bbb;
+    border-radius: 35px;
+    margin-right: 10px;
+    color: #bbb;
+    transition: .5s;
+    text-transform: uppercase;
+    font-size: 14px;
+    align-items: center;
+}
+
+.socialPart .TwoSocialPart .leftSocial a:hover {
+    background-color: #fc451e;
+    border: 1px solid #fc451e;
+    color: #fff;
+    
+}
+
+.socialPart .TwoSocialPart .leftSocial a .fa-circle {
+    color: #fc451e;
+    font-size: 10px;
+    margin-right: 8px;
+    transition: .5s;
+}
+
+.socialPart .TwoSocialPart .leftSocial a:hover .fa-circle {
+    color: #fff;
+}
+
+.socialPart .TwoSocialPart .rightSocial a {
+    color: #999;
+    font-size: 22px;
+    margin: 0 5px;
+}
+
+.socialPart .TwoSocialPart .rightSocial a:hover {
+    color: #fc451e;
+}
+/* Social Part End*/
+
+/* About me Area */
+.aboutMe {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 0 35px;
+}
+
+.aboutMe .aboutMyself {
+    display: flex;
+    padding: 25px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.aboutMe .aboutMyself .avator {
+    width: 120px;
+    margin-right: 20px;
+}
+
+.aboutMe .aboutMyself .avator img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.aboutMe .aboutMyself .detailsMe h3{
+    margin-bottom: 10px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.aboutMe .aboutMyself .detailsMe p{
+    margin-bottom: 10px;
+    color: #585858;
+}
+
+.aboutMe .aboutMyself .detailsMe a {
+    display: flex;
+    color: #ff4300;
+    align-items: center;
+}
+
+.aboutMe .aboutMyself .detailsMe a span{
+    margin-right: 5px;
+    text-transform: uppercase;
+}
+/* About me Area End */
+
+/* Some Carousel Area */
+.moreCarousel {
+    width: 100%;
+    background-color: #fff;
+}
+
+.moreCarousel .moreCarouHeading {
+    margin: 0 0 35px;
+}
+
+.moreCarousel .moreCarouHeading h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+}
+
+.moreCarousel .moreCarouselItems {
+    display: flex;
+}
+
+.moreCarousel .moreCarouselItems .moreCarouselItem {
+    width: 25%;
+    position: relative;
+}
+
+.moreCarousel .moreCarouselItems .moreCarouselItem .carouImg {
+    position: relative;
+}
+
+.moreCarousel .moreCarouselItems .moreCarouselItem .carouImg::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, .5);
+}
+
+.moreCarousel .moreCarouselItems .moreCarouselItem .carouImg img{
+    width: 100%;
+    height: 210px;
+    vertical-align: middle;
+}
+
+.moreCarousel .moreCarouselItems .moreCarouselItem .carouContent {
+    position: absolute;
+    bottom: 10%;
+    padding: 0 10px;
+}
+
+.moreCarousel .moreCarouselItems .moreCarouselItem .carouContent p {
+    font-size: 18px;
+    color: #fff;
+}
+
+.moreCarousel .moreCarouselItems .moreCarouselItem .carouContent p .fa-arrow-right {
+    font-size: 12px;
+    color: #ff4300;
+    margin-left: 5px;
+}
+/* Some Carousel Area End*/
+
+/* Footer Area  */
+.footerSection {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+/* Footer Area End */
